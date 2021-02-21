@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Sho Uken">
+  <meta name="keywords" content="">
+  <meta name="google-site-verification" content="tTHkBTjqK0ZCyNs61vrj2yUPYLSbta3dDRRFEswDqrY" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"rainchiangy.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>蒋禹轩的blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Python for Data Science and AI">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-02-21 17:08" pubdate>
+        2021年2月21日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      38
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Python for Data Science and AI</h1>
+            
+            <div class="markdown-body">
+              <h2 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h2><p><em>strings</em><br><em>integers</em><br><em>floats</em></p>
+<ul>
+<li>Converting from one object type to a different object type</li>
+</ul>
+<p><code>float(2)</code>  2.0        <code>str(1)</code> ”1”        <code>int(3.1)</code> 3</p>
+<h2 id="Expressions"><a href="#Expressions" class="headerlink" title="Expressions"></a>Expressions</h2><p><code>8 / 2</code>         4.0<br><code>20 // 6</code>     3<br><code>20 % 6</code>     2</p>
+<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><h5 id="Indexing"><a href="#Indexing" class="headerlink" title="Indexing"></a>Indexing</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">name=<span class="hljs-string">&#x27;jiang yuxuan&#x27;</span><br>print(name[<span class="hljs-number">0</span>])<br>print(name[<span class="hljs-number">6</span>])<br>print(<span class="hljs-built_in">len</span>(name))<br></code></pre></td></tr></table></figure>
+<p>j<br>y<br>12</p>
+<h5 id="Negative-Indexing"><a href="#Negative-Indexing" class="headerlink" title="Negative Indexing"></a>Negative Indexing</h5><p><code>print(name[-1])</code>    n</p>
+<h5 id="Slice"><a href="#Slice" class="headerlink" title="Slice"></a>Slice</h5><p><code>print(name[1:4])</code>    ian</p>
+<h5 id="Stride"><a href="#Stride" class="headerlink" title="Stride"></a>Stride</h5><p><code>print(name[::2])</code>    jagyxa</p>
+<h2 id="String-Operations"><a href="#String-Operations" class="headerlink" title="String Operations"></a>String Operations</h2><p><strong>.upper</strong><br><strong>.replace</strong><br><strong>.find</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">name=<span class="hljs-string">&#x27;jiang yuxuan&#x27;</span><br>print(name.upper())<br></code></pre></td></tr></table></figure>
+<p>JIANG YUXUAN<br><code>print(name.replace(&#39;yuxuan&#39;,&#39;yu’))</code><br>jiang yu<br><code>print(name.find(&#39;yuxuan&#39;))</code><br>6</p>
+<h2 id="Tuples"><a href="#Tuples" class="headerlink" title="Tuples"></a>Tuples</h2><p>==immutable==</p>
+<ul>
+<li><strong>.index( )</strong>:find the first index</li>
+<li><strong>len( )</strong></li>
+<li><strong>sorted( )</strong>:sort the values in a tuple and save it to a new tuple（排序）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">t_1=(‘disco<span class="hljs-string">&#x27;,10,1.2)</span><br><span class="hljs-string">print(t_1[-1])</span><br><span class="hljs-string">print(t_1[1:3])</span><br><span class="hljs-string">print(t_1.index(1.2))</span><br></code></pre></td></tr></table></figure>
+<p>1.2<br>(10, 1.2)<br>2</p>
+<h5 id="Combine-tuples"><a href="#Combine-tuples" class="headerlink" title="Combine tuples"></a>Combine tuples</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">t_1=(<span class="hljs-string">&#x27;disco&#x27;</span>,<span class="hljs-number">10</span>,<span class="hljs-number">1.2</span>)<br>t_2=t_1+(<span class="hljs-string">&#x27;hard rock&#x27;</span>,<span class="hljs-number">10</span>)<br>print(t_2)<br></code></pre></td></tr></table></figure>
+<p>(‘disco’, 10, 1.2, ‘hard rock’, 10)</p>
+<h5 id="Sorting"><a href="#Sorting" class="headerlink" title="Sorting"></a>Sorting</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">t=(<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>)<br>new=<span class="hljs-built_in">sorted</span>(t)<br>print(new)<br></code></pre></td></tr></table></figure>
+<p>[1, 2, 5]</p>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><ul>
+<li>change</li>
+<li><strong>del( )</strong></li>
+<li><strong>.extend( )</strong></li>
+<li><strong>.append( )</strong></li>
+<li><strong>.split( )</strong></li>
+<li>copy/clone</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">l=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,[<span class="hljs-number">3</span>,<span class="hljs-string">&#x27;A&#x27;</span>],[<span class="hljs-number">4</span>,<span class="hljs-string">&#x27;B&#x27;</span>]]<br>print(l[<span class="hljs-number">3</span>][<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
+<p>B</p>
+<h5 id="Change-the-element-based-on-the-index"><a href="#Change-the-element-based-on-the-index" class="headerlink" title="Change the element based on the index"></a>Change the element based on the index</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">l=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>l[<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br>print(l)<br></code></pre></td></tr></table></figure>
+<p>[2, 2, 3]</p>
+<h5 id="Delete-the-element-based-on-the-index"><a href="#Delete-the-element-based-on-the-index" class="headerlink" title="Delete the element based on the index"></a>Delete the element based on the index</h5><p><strong>del( )</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">l=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br><span class="hljs-keyword">del</span>(l[<span class="hljs-number">0</span>])<br>print(l)<br></code></pre></td></tr></table></figure>
+<p>[2, 3]</p>
+<h5 id="Add-new-elements-to-the-list"><a href="#Add-new-elements-to-the-list" class="headerlink" title="Add new elements to the list"></a>Add new elements to the list</h5><p><strong>.extend( )</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">l=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>l.extend([<span class="hljs-number">4</span>,<span class="hljs-number">5</span>])<br>print(l)<br></code></pre></td></tr></table></figure>
+<p>[1, 2, 3, 4, 5]</p>
+<h5 id="Add-one-element-to-the-list"><a href="#Add-one-element-to-the-list" class="headerlink" title="Add one element to the list"></a>Add one element to the list</h5><p><strong>.append( )</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">l=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>l.append([<span class="hljs-number">4</span>,<span class="hljs-number">5</span>])<br>print(l)<br></code></pre></td></tr></table></figure>
+<p>[1, 2, 3, [4, 5]]</p>
+<h5 id="split"><a href="#split" class="headerlink" title=".split( )"></a>.split( )</h5><ol>
+<li>Split the string, default is by space</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">l=<span class="hljs-string">&#x27;jiang yu xuan&#x27;</span><br>print(l.split( ))<br></code></pre></td></tr></table></figure>
+<p>[‘jiang’, ‘yu’, ‘xuan’]</p>
+<ol start="2">
+<li>Split the string by others</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">l=<span class="hljs-string">&#x27;jiang-yu-xuan&#x27;</span><br>print(l.split(<span class="hljs-string">&#x27;-&#x27;</span>))<br></code></pre></td></tr></table></figure>
+<p>[‘jiang’, ‘yu’, ‘xuan’]</p>
+<h5 id="Copy-List"><a href="#Copy-List" class="headerlink" title="Copy  List"></a>Copy  List</h5><p>If you change A , B will also change.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">A=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>B=A<br>print(‘B[<span class="hljs-number">0</span>]:’,B[<span class="hljs-number">0</span>])<br>A[<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br>print(‘B[<span class="hljs-number">0</span>]:’,B[<span class="hljs-number">0</span>])<br></code></pre></td></tr></table></figure>
+<p>B[0]: 1<br>B[0]: 2</p>
+<h5 id="Clone-List"><a href="#Clone-List" class="headerlink" title="Clone List"></a>Clone List</h5><p><code>B=A[:]</code><br>If you change A, B will not change.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">A=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>B=A[:]<br>print(<span class="hljs-string">&#x27;B[0]:&#x27;</span>,B[<span class="hljs-number">0</span>])<br>A[<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br>print(<span class="hljs-string">&#x27;B[0]:&#x27;</span>,B[<span class="hljs-number">0</span>])<br></code></pre></td></tr></table></figure>
+<p>B[0]: 1<br>B[0]: 1</p>
+<h2 id="Dictionaries"><a href="#Dictionaries" class="headerlink" title="Dictionaries"></a>Dictionaries</h2><ul>
+<li><strong>.keys( )</strong></li>
+<li><strong>.values( )</strong></li>
+<li><strong>del</strong></li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cvxx57hj30we0n441z.jpg" srcset="/img/loading.gif" alt="dictionaries"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">d=&#123;<span class="hljs-string">&#x27;jiang&#x27;</span>:<span class="hljs-number">11</span>,<span class="hljs-number">2</span>:<span class="hljs-number">22</span>,(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>):<span class="hljs-number">33</span>&#125;<br>print(d[<span class="hljs-number">2</span>])<br></code></pre></td></tr></table></figure>
+<p>22 </p>
+<h5 id="Get-all-the-keys-in-dictionary"><a href="#Get-all-the-keys-in-dictionary" class="headerlink" title="Get all the keys in dictionary"></a>Get all the keys in dictionary</h5><p><strong>.keys( )</strong><br><code>print(d.keys())</code><br>dict_keys([‘jiang’, 2, (0, 1)])</p>
+<h5 id="Get-all-the-values-in-dictionary"><a href="#Get-all-the-values-in-dictionary" class="headerlink" title="Get all the values in dictionary"></a>Get all the values in dictionary</h5><p><strong>.values( )</strong><br><code>print(d.values())</code><br>dict_values([11, 22, 33])</p>
+<h5 id="Append-value-with-key-into-dictionary"><a href="#Append-value-with-key-into-dictionary" class="headerlink" title="Append value with key into dictionary"></a>Append value with key into dictionary</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">d=&#123;<span class="hljs-string">&#x27;jiang&#x27;</span>:<span class="hljs-number">11</span>,<span class="hljs-number">2</span>:<span class="hljs-number">22</span>,(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>):<span class="hljs-number">33</span>&#125;<br>d[<span class="hljs-number">4</span>]=<span class="hljs-number">44</span><br>print(d)<br></code></pre></td></tr></table></figure>
+<p>{‘jiang’: 11, 2: 22, (0, 1): 33, 4: 44}</p>
+<h5 id="Delete-entries-by-key"><a href="#Delete-entries-by-key" class="headerlink" title="Delete entries by key"></a>Delete entries by key</h5><p><strong>del</strong><br><code>del d[&#39;jiang’]</code></p>
+<h5 id="Verify-the-key-is-in-the-dictionary"><a href="#Verify-the-key-is-in-the-dictionary" class="headerlink" title="Verify the key is in the dictionary"></a>Verify the key is in the dictionary</h5><p><code>print(&#39;jiang&#39; in d)</code><br>True</p>
+<h2 id="Sets"><a href="#Sets" class="headerlink" title="Sets"></a>Sets</h2><ul>
+<li><strong>set( )</strong></li>
+<li><strong>.add( )</strong></li>
+<li><strong>.remove( )</strong></li>
+<li><strong>&amp;</strong> / <strong>.intersection( )</strong></li>
+<li><strong>.difference( )</strong></li>
+<li><strong>.union( )</strong></li>
+<li><strong>.issuperset( )</strong> / <strong>.issubset( )</strong></li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cwsns98j31h00eun56.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-04 at 00.56.42"><br>==Python will automatically remove duplicate items==<br>==Sets are unordered==</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">s=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>&#125;<br>print(s)<br></code></pre></td></tr></table></figure>
+<p>{1, 2, 3, 4}</p>
+<h5 id="Convert-list-to-set"><a href="#Convert-list-to-set" class="headerlink" title="Convert list to set"></a>Convert list to set</h5><p><strong>set( )</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">l=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br>s=<span class="hljs-built_in">set</span>(l)<br>print(s)<br></code></pre></td></tr></table></figure>
+<p>{1, 2, 3, 4}</p>
+<h5 id="Add-an-element-to-a-set"><a href="#Add-an-element-to-a-set" class="headerlink" title="Add an element to a set"></a>Add an element to a set</h5><p><strong>.add( )</strong><br><code>s.add(5)</code></p>
+<h5 id="Remove-an-item-from-a-set"><a href="#Remove-an-item-from-a-set" class="headerlink" title="Remove an item from a set"></a>Remove an item from a set</h5><p><strong>.remove( )</strong><br><code>s.remove(1)</code></p>
+<h5 id="Verify-if-an-element-is-in-the-set"><a href="#Verify-if-an-element-is-in-the-set" class="headerlink" title="Verify if an element is in the set"></a>Verify if an element is in the set</h5><p><code>1 in s</code></p>
+<h5 id="Find-the-intersections"><a href="#Find-the-intersections" class="headerlink" title="Find the intersections"></a>Find the intersections</h5><p><strong>&amp;</strong><br><strong>.intersection( )</strong><br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cx6z15pj30yy0n07a9.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-04 at 02.12.50"><br>a={1,2,3,4,5}<br>b={3,4,5,6,7}<br><code>print(a&amp;b)</code><br><code>print(a.intersection(b))</code>        {3, 4, 5}</p>
+<h5 id="Find-the-difference-in-set1-but-not-set2"><a href="#Find-the-difference-in-set1-but-not-set2" class="headerlink" title="Find the difference in set1 but not set2"></a>Find the difference in set1 but not set2</h5><p><strong>.difference( )</strong><br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cxkrsrpj30y60mun08.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-04 at 02.13.56"><br><code>print(a.difference(b))</code>    {1, 2}</p>
+<h5 id="Find-the-union-of-two-sets"><a href="#Find-the-union-of-two-sets" class="headerlink" title="Find the union of two sets"></a>Find the union of two sets</h5><p><strong>.union( )</strong><br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cxqzcp6j30zq0nowhc.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-04 at 02.13.27"><br><code>print(a.union(b))</code>        {1, 2, 3, 4, 5, 6, 7}</p>
+<h5 id="Check-if-a-set-is-a-superset-or-subset-of-another-set"><a href="#Check-if-a-set-is-a-superset-or-subset-of-another-set" class="headerlink" title="Check if a set is a superset or subset of another set"></a>Check if a set is a superset or subset of another set</h5><p><strong>.issuperset( )</strong><br><strong>.issubset( )</strong><br>a={1,2,3,4,5}        b={3,4,5}<br><code>print(a.issuperset(b))</code>    True<br><code>print(b.issubset(a))</code>        True</p>
+<h2 id="Loops-for"><a href="#Loops-for" class="headerlink" title="Loops - - for"></a>Loops - - for</h2><p>The for loop is used for a controlled flow of repetition.</p>
+<ul>
+<li><strong>for…in</strong></li>
+<li><strong>range( )</strong></li>
+<li><strong>for…in range( )</strong></li>
+<li><strong>for…in enumerate( )</strong></li>
+</ul>
+<h5 id="for…in"><a href="#for…in" class="headerlink" title="for…in"></a>for…in</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">name=[<span class="hljs-string">&#x27;Jack&#x27;</span>,<span class="hljs-string">&#x27;Marry&#x27;</span>,<span class="hljs-string">&#x27;Bob&#x27;</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> name:<br>	print(i)<br></code></pre></td></tr></table></figure>
+<p>Jack<br>Marry<br>Bob</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">A=[<span class="hljs-string">&#x27;1&#x27;</span>,<span class="hljs-string">&#x27;2&#x27;</span>,<span class="hljs-string">&#x27;3&#x27;</span>]<br><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> A:<br>  print(<span class="hljs-number">2</span>*a)<br></code></pre></td></tr></table></figure>
+<p>11<br>22<br>33</p>
+<h5 id="range"><a href="#range" class="headerlink" title="range( )"></a>range( )</h5><p>It is helpful to think of the range object as an ordered list.<br><code>range(3)</code>          0,1,2</p>
+<h5 id="for…-in-range"><a href="#for…-in-range" class="headerlink" title="for… in range ( )"></a>for… in range ( )</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>):<br>	print(n)<br></code></pre></td></tr></table></figure>
+<p>1<br>2</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">dates = [<span class="hljs-number">1982</span>,<span class="hljs-number">1980</span>,<span class="hljs-number">1973</span>]<br>N = <span class="hljs-built_in">len</span>(dates)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N):<br>    print(dates[i])     <br></code></pre></td></tr></table></figure>
+<p>1982<br>1980<br>1973</p>
+<h5 id="Use-for-loop-to-change-the-elements-in-list"><a href="#Use-for-loop-to-change-the-elements-in-list" class="headerlink" title="Use for loop to change the elements in list"></a>Use for loop to change the elements in list</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">squares = [<span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;yellow&#x27;</span>, <span class="hljs-string">&#x27;green&#x27;</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>):<br>    print(<span class="hljs-string">&quot;Before square &quot;</span>, i, <span class="hljs-string">&#x27;is&#x27;</span>,  squares[i])<br>    squares[i] = <span class="hljs-string">&#x27;weight&#x27;</span><br>    print(<span class="hljs-string">&quot;After square &quot;</span>, i, <span class="hljs-string">&#x27;is&#x27;</span>,  squares[i])<br></code></pre></td></tr></table></figure>
+<p>Before square  0 is red<br>After square  0 is weight<br>Before square  1 is yellow<br>After square  1 is weight<br>Before square  2 is green<br>After square  2 is weight</p>
+<h5 id="for…in-enumerate"><a href="#for…in-enumerate" class="headerlink" title="for…in enumerate( )"></a>for…in enumerate( )</h5><p>We can access the index and the elements of a list as follows</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> i,x <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>([<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>]):<br>    print(i,x)<br></code></pre></td></tr></table></figure>
+<p>0 A<br>1 B<br>2 C</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">squares=[<span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;yellow&#x27;</span>, <span class="hljs-string">&#x27;green&#x27;</span>]<br><span class="hljs-keyword">for</span> i, n <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(squares):<br>    print(i, n)<br></code></pre></td></tr></table></figure>
+<p>0 red<br>1 yellow<br>2 green</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> i,x <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>([<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;B&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>]):<br>    print(i+<span class="hljs-number">1</span>,x)<br></code></pre></td></tr></table></figure>
+<p>1 A<br>2 B<br>3 C</p>
+<h2 id="Loops-while"><a href="#Loops-while" class="headerlink" title="Loops - - while"></a>Loops - - while</h2><p>The while loop exists as a tool for repeated execution based on a condition. The code block will keep being executed until the given logical condition returns a <strong>False</strong> boolean value.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">dates = [<span class="hljs-number">1982</span>, <span class="hljs-number">1980</span>, <span class="hljs-number">1973</span>, <span class="hljs-number">2000</span>]<br>i = <span class="hljs-number">0</span><br>year = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span>(year != <span class="hljs-number">1973</span>):<br>    year = dates[i]<br>    i = i + <span class="hljs-number">1</span><br>    print(year)<br>print(<span class="hljs-string">&quot;It took &quot;</span>, i ,<span class="hljs-string">&quot;repetitions to get out of loop.&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>1982<br>1980<br>1973<br>It took  3 repetitions to get out of loop.</p>
+<hr>
+<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><h5 id="Pre-defined-functions"><a href="#Pre-defined-functions" class="headerlink" title="Pre-defined functions"></a>Pre-defined functions</h5><ul>
+<li><strong>sum( )</strong> :adds all the elements in a list or tuple</li>
+<li><strong>len( )</strong> :returns the length of a list or tuple</li>
+<li><strong>sorted( )</strong>:is a function and returns a new list, it does not change the list</li>
+</ul>
+<h5 id="def"><a href="#def" class="headerlink" title="def"></a>def</h5><p>The statement <strong>return</strong> exits a function, optionally passing back a value.<br>If there is no <strong>return</strong> statement, the function returns <strong>None</strong>. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span>(<span class="hljs-params">a</span>):</span><br>    b = a + <span class="hljs-number">1</span><br>    print(a, <span class="hljs-string">&quot;if you add one&quot;</span>, b)<br>    <span class="hljs-keyword">return</span>(b)<br>add(<span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure>
+<p>1 if you add one 2</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Mult</span>(<span class="hljs-params">a, b</span>):</span><br>    c = a * b<br>    print(c)   <br>Mult(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)<br></code></pre></td></tr></table></figure>
+<p>20</p>
+<h5 id="Using-if-else-Statements-and-Loops-in-Functions"><a href="#Using-if-else-Statements-and-Loops-in-Functions" class="headerlink" title="Using if/else Statements and Loops in Functions"></a>Using if/else Statements and Loops in Functions</h5><p>The return() function is particularly useful if you have any IF statements in the function, when you want your output to be dependent on some condition:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">type_of_album</span>(<span class="hljs-params">artist, album, year_released</span>):</span>  <br>    print(artist, album, year_released)<br>    <span class="hljs-keyword">if</span> year_released &gt; <span class="hljs-number">1980</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Modern&quot;</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Oldie&quot;</span>   <br>x = type_of_album(<span class="hljs-string">&quot;Michael Jackson&quot;</span>, <span class="hljs-string">&quot;Thriller&quot;</span>, <span class="hljs-number">1980</span>)<br>print(x)<br></code></pre></td></tr></table></figure>
+<p>Michael Jackson Thriller 1980</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PrintList</span>(<span class="hljs-params">the_list</span>):</span><br>    <span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> the_list:<br>        print(element)<br>PrintList([<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;the man&#x27;</span>, <span class="hljs-string">&quot;abc&quot;</span>])<br></code></pre></td></tr></table></figure>
+<p>1<br>1<br>the man<br>abc</p>
+<h5 id="Setting-default-argument-values-in-your-custom-functions"><a href="#Setting-default-argument-values-in-your-custom-functions" class="headerlink" title="Setting default argument values in your custom functions"></a>Setting default argument values in your custom functions</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isGoodRating</span>(<span class="hljs-params">rating=<span class="hljs-number">4</span></span>):</span> <br>    <span class="hljs-keyword">if</span>(rating &lt; <span class="hljs-number">7</span>):<br>        print(<span class="hljs-string">&quot;this album sucks it&#x27;s rating is&quot;</span>,rating)      <br>    <span class="hljs-keyword">else</span>:<br>        print(<span class="hljs-string">&quot;this album is good its rating is&quot;</span>,rating)<br>isGoodRating()<br>isGoodRating(<span class="hljs-number">10</span>)<br></code></pre></td></tr></table></figure>
+<p>this album sucks it’s rating is 4<br>this album is good its rating is 10</p>
+<h5 id="Global-variables"><a href="#Global-variables" class="headerlink" title="Global variables"></a>Global variables</h5><p><strong>global</strong><br>So far, we’ve been creating variables within functions, but we have not discussed variables outside the function. These are called global variables. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">artist = <span class="hljs-string">&quot;Michael Jackson&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printer1</span>(<span class="hljs-params">artist</span>):</span><br>    internal_var = artist<br>    print(artist, <span class="hljs-string">&quot;is an artist&quot;</span>) <br>printer1(artist)<br></code></pre></td></tr></table></figure>
+<p>If we print internal_var we get an error because all the variables we create in the function is a <strong>local variable</strong>, meaning that the variable assignment does not persist outside the function.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">artist = <span class="hljs-string">&quot;Michael Jackson&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printer</span>(<span class="hljs-params">artist</span>):</span><br>    <span class="hljs-keyword">global</span> internal_var <br>    internal_var= <span class="hljs-string">&quot;Whitney Houston&quot;</span><br>    print(artist,<span class="hljs-string">&quot;is an artist&quot;</span>)<br>printer(artist) <br>printer(internal_var)<br></code></pre></td></tr></table></figure>
+
+<h2 id="Objects-and-Classes"><a href="#Objects-and-Classes" class="headerlink" title="Objects and Classes"></a>Objects and Classes</h2><h5 id="Creating-a-Class"><a href="#Creating-a-Class" class="headerlink" title="Creating a Class"></a>Creating a Class</h5><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cy2lb4lj30xk0csaeq.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-05 at 16.24.24"><br>constructo <strong><em>init</em></strong> which is used to initialize the object. The input are data attributes. The term self contains all the attributes in the set. For example the self.color gives the value of the attribute color and self.radius will give you the radius of the object. </p>
+<h2 id="Reading-Files-with-Open"><a href="#Reading-Files-with-Open" class="headerlink" title="Reading Files with Open"></a>Reading Files with Open</h2><ul>
+<li><strong>open</strong> function</li>
+<li><strong>with open ( ) as…</strong></li>
+<li><strong>.read</strong> method </li>
+<li><strong>.readline</strong> method</li>
+<li><strong>.readlines</strong> method</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cy93zqaj30r005q0u2.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-05 at 18.31.00"></p>
+<h5 id="Read-the-Example1-txt"><a href="#Read-the-Example1-txt" class="headerlink" title="Read the Example1.txt"></a>Read the Example1.txt</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">example1 = <span class="hljs-string">&quot;/resources/data/Example1.txt&quot;</span><br>file1 = <span class="hljs-built_in">open</span>(example1, <span class="hljs-string">&quot;r”)</span><br></code></pre></td></tr></table></figure>
+<h5 id="View-the-attributes-of-the-file"><a href="#View-the-attributes-of-the-file" class="headerlink" title="View the attributes of the file."></a>View the attributes of the file.</h5><p>The name of the file:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#Print the path of file</span><br>file1.name<br></code></pre></td></tr></table></figure>
+<p>The mode the file object is in:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># Print the mode of file, either &#x27;r&#x27; or &#x27;w&#x27;</span><br>file1.mode<br></code></pre></td></tr></table></figure>
+<p>We can read the file and assign it to a variable :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">FileContent = file1.read()<br>FileContent<br></code></pre></td></tr></table></figure>
+<p>We must close the file object:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># Close file after finish</span><br>file1.close()<br></code></pre></td></tr></table></figure>
+<h5 id="A-Better-Way-to-Open-a-File"><a href="#A-Better-Way-to-Open-a-File" class="headerlink" title="A Better Way to Open a File"></a>A Better Way to Open a File</h5><p>Using the <strong>with</strong> statement is better practice, it automatically closes the file even if the code encounters an exception.<br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cyfpekej30r208cgns.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-05 at 18.41.47"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(example1, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file1:<br>    FileContent = file1.read()<br>    print(FileContent)<br></code></pre></td></tr></table></figure>
+<h5 id="Read-first-four-characters"><a href="#Read-first-four-characters" class="headerlink" title="Read first four characters"></a>Read first four characters</h5><p><strong>.read</strong>method</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(example1, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file1:<br>    print(file1.read(<span class="hljs-number">4</span>))<br></code></pre></td></tr></table></figure>
+<h5 id="Read-certain-amount-of-characters"><a href="#Read-certain-amount-of-characters" class="headerlink" title="Read certain amount of characters"></a>Read certain amount of characters</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(example1, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file1:<br>    print(file1.read(<span class="hljs-number">4</span>))<br>    print(file1.read(<span class="hljs-number">4</span>))<br>    print(file1.read(<span class="hljs-number">7</span>))<br>    print(file1.read(<span class="hljs-number">15</span>))<br></code></pre></td></tr></table></figure>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gg9cyln83sj30om0j4whg.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-01-05 at 18.45.30"></p>
+<h5 id="Read-one-line"><a href="#Read-one-line" class="headerlink" title="Read one line"></a>Read one line</h5><p><strong>.readline</strong> method</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(example1, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file1:<br>    print(<span class="hljs-string">&quot;first line: &quot;</span> + file1.readline())<br></code></pre></td></tr></table></figure>
+<p>Use a loop to iterate through each line</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(example1,<span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file1:<br>        i = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> file1:<br>            print(<span class="hljs-string">&quot;Iteration&quot;</span>, <span class="hljs-built_in">str</span>(i), <span class="hljs-string">&quot;: &quot;</span>, line)<br>            i = i + <span class="hljs-number">1</span>;<br></code></pre></td></tr></table></figure>
+<h5 id="Read-all-lines-and-save-as-a-list"><a href="#Read-all-lines-and-save-as-a-list" class="headerlink" title="Read all lines and save as a list"></a>Read all lines and save as a list</h5><p><strong>.readlines</strong> method</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(example1, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file1:<br>    FileasList = file1.readlines()<br></code></pre></td></tr></table></figure>
+<p>Print the first line:<br><code>FileasList[0]</code></p>
+<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><p><code>a=np.array([0,1,2,3,4])</code><br>A numpy array is similar to a list. It’s usually fixed in size and each element is of the same type.</p>
+<h3 id="1D-Numpy"><a href="#1D-Numpy" class="headerlink" title="1D Numpy"></a>1D Numpy</h3><h5 id="Assign-value"><a href="#Assign-value" class="headerlink" title="Assign value"></a>Assign value</h5><p>Assign the first element to 100</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">c=np.array([<span class="hljs-number">20</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>])<br>c[<span class="hljs-number">0</span>]=<span class="hljs-number">100</span><br>print(c)<br></code></pre></td></tr></table></figure>
+<p>[100   1   2   3   4]</p>
+<h5 id="Slicing"><a href="#Slicing" class="headerlink" title="Slicing"></a>Slicing</h5><ol>
+<li>Like lists, we can slice the numpy array, and we can select the elements from 1 to 3 and assign it to a new numpy array d as follows<br><code>print(c[1:4]</code><br>[1 2 3]</li>
+<li>Set the fourth element and fifth element to 300 and 400</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">c[<span class="hljs-number">3</span>:<span class="hljs-number">5</span>]=<span class="hljs-number">300</span>,<span class="hljs-number">400</span><br>print(c)<br></code></pre></td></tr></table></figure>
+<p>[100   1   2 300 400]</p>
+<h5 id="Other-Attributes"><a href="#Other-Attributes" class="headerlink" title="Other Attributes"></a>Other Attributes</h5><p><strong>.size</strong>                the number of elements in the array<br><strong>.ndim</strong>            the number of array dimensions<br>                    秩，即轴的数量或维度的数量<br><strong>.shape</strong>            数组的维度，对于矩阵，n 行 m 列<br><strong>.max( )</strong><br><strong>.min( )</strong><br><strong>.mean( )</strong><br><strong>.std( )</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">a=np.array([<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>])<br>print(a.size)<br>print(a.ndim)<br>print(a.shape)<br></code></pre></td></tr></table></figure>
+<p>5<br>1<br>(5,)</p>
+<h5 id="Array-Addition"><a href="#Array-Addition" class="headerlink" title="Array Addition"></a>Array Addition</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">a=np.array([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>])<br>b=np.array([<span class="hljs-number">3</span>,<span class="hljs-number">2</span>])<br>print(a+b)<br></code></pre></td></tr></table></figure>
+<p>[4 4]</p>
+<h5 id="Array-Multiplication"><a href="#Array-Multiplication" class="headerlink" title="Array Multiplication"></a>Array Multiplication</h5><p><code>print(2*a)</code>        [2 4]</p>
+<h5 id="Product-of-Two-Numpy-Arrays"><a href="#Product-of-Two-Numpy-Arrays" class="headerlink" title="Product of Two Numpy Arrays"></a>Product of Two Numpy Arrays</h5><p><code>print(a*b)</code>        [3 4]</p>
+<h5 id="Dot-Product"><a href="#Dot-Product" class="headerlink" title="Dot Product"></a>Dot Product</h5><p><code>print(np.dot(a,b))</code>        7</p>
+<h5 id="Adding-Constant-to-a-Numpy-Array"><a href="#Adding-Constant-to-a-Numpy-Array" class="headerlink" title="Adding Constant to a Numpy Array"></a>Adding Constant to a Numpy Array</h5><p><code>print(a+1)</code><br>[2 3]</p>
+<h3 id="2D-Numpy"><a href="#2D-Numpy" class="headerlink" title="2D Numpy"></a>2D Numpy</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">a=[[<span class="hljs-number">11</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>],[<span class="hljs-number">21</span>,<span class="hljs-number">22</span>,<span class="hljs-number">23</span>],[<span class="hljs-number">31</span>,<span class="hljs-number">32</span>,<span class="hljs-number">33</span>]]<br>A=np.array(a)<br>print(A)<br></code></pre></td></tr></table></figure>
+<p>[[11 12 13]<br> [21 22 23]<br> [31 32 33]]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">print(A.ndim)<br>print(A.shape)<br>print(A.size)<br></code></pre></td></tr></table></figure>
+<p>2<br>(3,3)<br>9</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/02/21/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">python学习笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
